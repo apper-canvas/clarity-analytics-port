@@ -94,12 +94,12 @@ const UsersTable = ({
                 <>
                     {/* Users Table */}
                     <div className="overflow-x-auto">
-                        <table className="min-w-full">
+<table className="min-w-full">
                             <thead>
                                 <tr className="border-b border-gray-200">
                                     <th className="px-6 py-3 text-left">
                                         <Checkbox
-                                            checked={selectedUsers.size === paginatedUsers.length &amp;&amp; paginatedUsers.length > 0}
+                                            checked={selectedUsers.size === paginatedUsers.length && paginatedUsers.length > 0}
                                             onChange={onSelectAll}
                                         />
                                     </th>
@@ -116,12 +116,23 @@ const UsersTable = ({
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200">
-                                {paginatedUsers.map((user, index) => (
+{paginatedUsers.map((user, index) => (
                                     <UserTableRow
                                         key={user.id}
                                         user={user}
                                         isSelected={selectedUsers.has(user.id)}
-                                        onSelect={onSelectAll} // Re-using handleSelectAll logic for single select too.
+                                        onSelect={(userId) => {
+                                            // Handle individual user selection
+                                            const newSelected = new Set(selectedUsers);
+                                            if (newSelected.has(userId)) {
+                                                newSelected.delete(userId);
+                                            } else {
+                                                newSelected.add(userId);
+                                            }
+                                            // This assumes onSelectAll can handle both individual and bulk selection
+                                            // If not, a separate onSelectUser prop should be added to the component
+                                            onSelectAll(newSelected);
+                                        }}
                                         getStatusColor={getStatusColor}
                                         onViewDetails={onViewUserDetails}
                                         index={index}
