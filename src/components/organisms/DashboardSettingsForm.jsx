@@ -54,18 +54,18 @@ const DashboardSettingsForm = ({ settings, onUpdate, onSave, loading }) => {
                 </div>
             </div>
 
-            <div className="pt-6 border-t border-gray-200">
+<div className="pt-6 border-t border-gray-200">
                 <Text as="h3" className="text-lg font-medium text-gray-900 mb-4">Display Options</Text>
                 <div className="space-y-4">
-                    {displayOptions.map((item) => (
+                    {displayOptions?.map((item) => (
                         <ToggleSwitch
                             key={item.key}
                             label={item.label}
                             description={item.description}
-                            checked={settings[item.key]}
+                            checked={settings?.[item.key] || false}
                             onChange={(e) => onUpdate(item.key, e.target.checked)}
                         />
-                    ))}
+                    )) || null}
                 </div>
             </div>
 
