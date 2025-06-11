@@ -1,9 +1,10 @@
-import Dashboard from '../pages/Dashboard';
-import Users from '../pages/Users';
-import Analytics from '../pages/Analytics';
-import Reports from '../pages/Reports';
-import Settings from '../pages/Settings';
-import NotFound from '../pages/NotFound';
+import DashboardPage from '@/components/pages/DashboardPage';
+import UsersPage from '@/components/pages/UsersPage';
+import AnalyticsPage from '@/components/pages/AnalyticsPage';
+import ReportsPage from '@/components/pages/ReportsPage';
+import SettingsPage from '@/components/pages/SettingsPage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
+import HomePage from '@/components/pages/HomePage';
 
 export const routes = {
   dashboard: {
@@ -11,42 +12,49 @@ export const routes = {
     label: 'Dashboard',
     path: '/dashboard',
     icon: 'LayoutDashboard',
-    component: Dashboard
+component: DashboardPage
+  },
+  home: {
+    id: 'home',
+    label: 'Home',
+    path: '/',
+    icon: 'Home',
+    component: HomePage
   },
   users: {
     id: 'users',
     label: 'Users',
     path: '/users',
     icon: 'Users',
-    component: Users
+component: UsersPage
   },
   analytics: {
     id: 'analytics',
     label: 'Analytics',
     path: '/analytics',
     icon: 'BarChart3',
-    component: Analytics
+component: AnalyticsPage
   },
   reports: {
     id: 'reports',
     label: 'Reports',
     path: '/reports',
     icon: 'FileText',
-    component: Reports
+component: ReportsPage
   },
   settings: {
     id: 'settings',
     label: 'Settings',
     path: '/settings',
     icon: 'Settings',
-    component: Settings
+component: SettingsPage
   },
   notFound: {
     id: 'notFound',
     label: 'Not Found',
     path: '*',
     icon: 'AlertCircle',
-    component: NotFound
+component: NotFoundPage
   }
 };
 
