@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Active Users",
+    "value": 2847,
+    "change": 12.3,
+    "trend": [2650, 2680, 2720, 2750, 2780, 2810, 2847],
+    "period": "month"
+  },
+  {
+    "id": "2",
+    "name": "Monthly Revenue",
+    "value": 45678,
+    "change": 8.7,
+    "trend": [42000, 42500, 43200, 43800, 44500, 45100, 45678],
+    "period": "month"
+  },
+  {
+    "id": "3",
+    "name": "Churn Rate",
+    "value": 3.2,
+    "change": -1.5,
+    "trend": [4.1, 3.9, 3.7, 3.5, 3.4, 3.3, 3.2],
+    "period": "month"
+  },
+  {
+    "id": "4",
+    "name": "Growth Rate",
+    "value": 15.8,
+    "change": 2.4,
+    "trend": [12.5, 13.2, 13.8, 14.5, 15.1, 15.4, 15.8],
+    "period": "month"
+  },
+  {
+    "id": "5",
+    "name": "Weekly Active Users",
+    "value": 1923,
+    "change": 5.6,
+    "trend": [1820, 1835, 1860, 1885, 1900, 1915, 1923],
+    "period": "week"
+  },
+  {
+    "id": "6",
+    "name": "Daily Revenue",
+    "value": 1523,
+    "change": 3.2,
+    "trend": [1450, 1465, 1480, 1495, 1505, 1515, 1523],
+    "period": "day"
+  }
+]

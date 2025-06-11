@@ -1,0 +1,108 @@
+[
+  {
+    "id": "1",
+    "userId": "1",
+    "action": "login",
+    "timestamp": "2024-03-20T14:22:00Z",
+    "metadata": {
+      "device": "desktop",
+      "browser": "Chrome",
+      "location": "San Francisco, CA"
+    }
+  },
+  {
+    "id": "2",
+    "userId": "2",
+    "action": "create_report",
+    "timestamp": "2024-03-20T13:45:00Z",
+    "metadata": {
+      "reportType": "user-analytics",
+      "dateRange": "30days"
+    }
+  },
+  {
+    "id": "3",
+    "userId": "5",
+    "action": "upgrade_plan",
+    "timestamp": "2024-03-20T12:30:00Z",
+    "metadata": {
+      "fromPlan": "Pro",
+      "toPlan": "Enterprise",
+      "amount": 2499
+    }
+  },
+  {
+    "id": "4",
+    "userId": "3",
+    "action": "export_data",
+    "timestamp": "2024-03-19T16:15:00Z",
+    "metadata": {
+      "format": "csv",
+      "records": 1250
+    }
+  },
+  {
+    "id": "5",
+    "userId": "8",
+    "action": "api_call",
+    "timestamp": "2024-03-19T15:30:00Z",
+    "metadata": {
+      "endpoint": "/api/v1/metrics",
+      "method": "GET",
+      "status": 200
+    }
+  },
+  {
+    "id": "6",
+    "userId": "4",
+    "action": "signup",
+    "timestamp": "2024-03-19T14:20:00Z",
+    "metadata": {
+      "plan": "Free",
+      "source": "organic",
+      "referrer": "google"
+    }
+  },
+  {
+    "id": "7",
+    "userId": "6",
+    "action": "view_dashboard",
+    "timestamp": "2024-03-19T13:10:00Z",
+    "metadata": {
+      "duration": 420,
+      "sections": ["metrics", "users", "charts"]
+    }
+  },
+  {
+    "id": "8",
+    "userId": "9",
+    "action": "configure_alert",
+    "timestamp": "2024-03-19T11:45:00Z",
+    "metadata": {
+      "metric": "churn_rate",
+      "threshold": 5.0,
+      "notification": "email"
+    }
+  },
+  {
+    "id": "9",
+    "userId": "1",
+    "action": "bulk_action",
+    "timestamp": "2024-03-18T16:30:00Z",
+    "metadata": {
+      "action": "export_users",
+      "count": 25,
+      "filters": ["plan:Pro", "status:active"]
+    }
+  },
+  {
+    "id": "10",
+    "userId": "7",
+    "action": "password_reset",
+    "timestamp": "2024-03-18T10:15:00Z",
+    "metadata": {
+      "method": "email",
+      "success": true
+    }
+  }
+]
