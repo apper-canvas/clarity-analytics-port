@@ -60,8 +60,8 @@ const UsersPage = () => {
     setSelectedUsers(newSelected);
   };
 
-  const handleSelectAll = () => {
-    if (selectedUsers.size === paginatedUsers.length &amp;&amp; paginatedUsers.length > 0) {
+const handleSelectAll = () => {
+    if (selectedUsers.size === paginatedUsers.length && paginatedUsers.length > 0) {
       setSelectedUsers(new Set());
     } else {
       setSelectedUsers(new Set(paginatedUsers.map(user => user.id)));
@@ -202,7 +202,7 @@ const UsersPage = () => {
             totalPages={totalPages}
             onPageChange={handlePageChange}
           />
-          {filteredUsers.length === 0 &amp;&amp; (searchTerm || filterPlan !== 'all') &amp;&amp; (
+{filteredUsers.length === 0 && (searchTerm || filterPlan !== 'all') && (
             <div className="text-center mt-4">
               <button
                 onClick={handleClearFilters}
